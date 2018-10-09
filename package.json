@@ -1,0 +1,22 @@
+{
+  "name": "image-viewer",
+  "version": "0.0.1",
+  "description": "Educational project to improve image loading optimization",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Dnepr0/image-viewer.git"
+  },
+  "author": "Andrey",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Dnepr0/image-viewer/issues"
+  },
+  "homepage": "https://github.com/Dnepr0/image-viewer#readme",
+  "dependencies": {
+    "gm": "^1.23.1"
+  }
+}
