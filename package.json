@@ -3,13 +3,15 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www"
+    "server": "node ./bin/www",
+    "compress": "node ./utils/img_compress.js"
   },
   "dependencies": {
     "cookie-parser": "~1.4.3",
     "debug": "~2.6.9",
     "ejs": "~2.5.7",
     "express": "~4.16.0",
+    "formidable": "^1.2.1",
     "gm": "^1.23.1",
     "http-errors": "~1.6.2",
     "morgan": "~1.9.0"

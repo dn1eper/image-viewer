@@ -1,6 +1,7 @@
 body {
   font: 14px "Courier New", Courier, monospace;
   margin: 0;
+  text-align: center;
 }
 
 nav {
@@ -53,6 +54,9 @@ nav {
   display: block;
 }
 
+span {
+  align-content: center;
+}
 
 /* close button */
 .img-full-close {
