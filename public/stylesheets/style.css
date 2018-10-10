@@ -1,8 +1,79 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: 14px "Courier New", Courier, monospace;
+  margin: 0;
 }
 
-a {
-  color: #00B7FF;
+nav {
+  font-family: 'Monoton';
+  font-size: 36px;
+  text-align: center;
+}
+
+.img-matrix {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.img-cell {
+  overflow: hidden;
+  margin: 0;
+  background-position: center;
+  background-size: cover;
+  width: 320px;
+  height: 320px;
+  transition: all 0.5s ease-out;
+}
+
+.img-cell:hover {
+  opacity: 0.8;
+  cursor: pointer;
+  transform: scale(0.97);
+}
+
+.img-full {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.6);
+  display: none;
+  align-content: center; 
+  justify-content: center; 
+}
+
+.img-container {
+  margin: 32px;
+  max-height: 100%;
+}
+
+.img-container img { 
+  display: block;
+}
+
+
+/* close button */
+.img-full-close {
+  position: absolute;
+  right: 32px;
+  top: 32px;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+}
+.img-full-close:before, .img-full-close:after {
+  position: absolute;
+  left: 15px;
+  content: ' ';
+  height: 33px;
+  width: 2px;
+  background-color: #333;
+}
+.img-full-close:before {
+  transform: rotate(45deg);
+}
+.img-full-close:after {
+  transform: rotate(-45deg);
 }

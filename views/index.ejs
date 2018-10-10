@@ -3,9 +3,47 @@
   <head>
     <title><%= title %></title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link href='https://fonts.googleapis.com/css?family=Monoton' rel='stylesheet'>
+
+    <script src="/vendor/bower_components/jquery/dist/jquery.min.js"></script>
   </head>
   <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+
+    <nav class="navbar">
+      <h1><%= title %></h1>
+    </nav>
+    
+    <main class="main">
+      <div class="img-matrix">
+        <% photo.forEach(function(item) { %>
+          <div class="img-cell" style=
+            <%= "background-image:url(photo/" + item + ")" %>
+          >
+          </div>
+        <% }) %>
+      </div>
+
+      <div class="img-full">
+        <div class="img-full-close"></div>
+          <img class="img-container"/>
+      </div>
+    </main>
+
+    <script>
+      // open fullscreen view
+      $('.img-cell').click((e) => {
+        $('body').css('overflow', 'hidden')
+        $('.img-full').css('display', 'flex')
+
+        $('.img-container').attr('src', e.currentTarget.style.backgroundImage.slice(5, -2))
+        console.dir(e.currentTarget.style.backgroundImage.slice(4, -1))
+      })
+      // close fullscreen view
+      $('.img-full-close').click(() => {
+        $('body').css('overflow', 'scroll')
+        $('.img-full').css('display', 'none')
+      })
+    </script>
+    
   </body>
 </html>

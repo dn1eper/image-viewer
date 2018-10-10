@@ -1,2 +1,5 @@
 node_modules/
+public/vendor/
+public/photo/
+
 package-lock.json
