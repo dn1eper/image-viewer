@@ -1,5 +1,5 @@
 node_modules/
-public/vendor/
+public/bower_components/
 public/photo/
 ws.code-workspace
 package-lock.json

@@ -8,7 +8,7 @@ var workDir = process.env.INIT_CWD + "/public/photo/",
 /* Сжимает изображения до нужного размера, 
  * imgs - массив имен изображений в папке photo
  * size - до какого размера сжать изображения
- * callback - функцыя которая будет вызвана в конце сжатия 
+ * callback - функция, которая будет вызвана по завершении минификации
  */
 function img_compress(imgs, size, callback) {
   if (imgs.length) {
