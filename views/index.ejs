@@ -3,8 +3,12 @@
   <head>
     <title><%= title %></title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" href="/vendor/lazyloadxt/jquery.lazyloadxt.fadein.min.css">
     <link href='https://fonts.googleapis.com/css?family=Monoton' rel='stylesheet'>
-    <script src="/vendor/bower_components/jquery/dist/jquery.min.js"></script>
+    
+    <script src="/vendor/jquery/jquery.min.js"></script>
+    <script src="/vendor/lazyloadxt/jquery.lazyloadxt.min.js"></script>
+    <script src="/vendor/lazyloadxt/jquery.lazyloadxt.bg.min.js"></script>
   </head>
   <body>
 
@@ -13,16 +17,14 @@
       <form id="form" enctype="multipart/form-data" method="POST">
         <input type="file" name="file" accept="image/*" class="upload_btn" required/>    
       </form>
-      
     </nav>
 
     <main class="main">
       <div class="img-matrix">
         <% photo.forEach(function(item) { %>
-          <div class="img-cell" style=
-            <%= "background-image:url(photo/compressed/" + item + ")" %>
-          >
-          </div>
+          <div class="img-cell lazy-hidden" data-bg=
+            <%= "photo/compressed/" + item %>
+          ></div>
         <% }) %>
       </div>
 
